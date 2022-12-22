@@ -1,112 +1,240 @@
-:root {
-    --black: rgba(0, 0, 0, 1);
-    --grey: rgba(207, 207, 207, 1);
-    --red:rgba(252, 0, 0, 1);
-}
+    :root {
+        --black: rgba(0, 0, 0, 1);
+        --white: rgba(255, 255, 255, 1);
+        --gold: rgb(230, 207, 0);
+        --grey: rgba(207, 207, 207, 1);
+        --red:rgba(252, 0, 0, 1);
+    }
 
-body {
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-}
+    body {
+        padding: 0px;
+        margin: 0px;
+        overflow-x: hidden;
+    }
 
-.flex-row-center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+    .flex-row-center {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 
-.flex-row-spaceBetween {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
+    .flex-row-spaceBetween {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.flex-row-spaceEvenly {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
+    .flex-row-spaceEvenly {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 
-.flex-column-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    .flex-row-start-center {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    min-height: 100vh;
-    min-width: 100vw;
-}
+    .flex-column-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-.section {
-    border: 1px solid var(--red);
-}
+    .flex-column-center-start {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
 
-/* HEADER START ----------------------------------------*/
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, max-content);
+        min-height: 100vh;
+        min-width: 100vw;
+    }
 
-.section.header {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    padding: 10px 40px;
-}
+    .section {
+        /* border: 1px solid var(--red); */
+    }
 
-.section.header nav {
-    height: 100%;
-}
+    a {
+        text-decoration: none;
+        color: var(--black);
+    }
 
-.section.header ul{
-    display: inline-block;
-}
+    a:hover {
+        color: var(--gold);
+    }
 
-.section.header ul li{
-    display: inline-block;
-}
+    a:active {
+        color: var(--black);
+    }
 
-/* HEADER END ------------------------------------------*/
+    /* HEADER START ----------------------------------------*/
 
-/* ------------------------------------------------------------- */
+    .section.header {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        padding: 10px 20px;
+        height: 100px;
+        font-size: 1.3rem;
+        background-color: var(--black);
+        color: var(--white);
+    }
 
-/* BANNER START ----------------------------------------*/
+    .section.header .nav {
+        height: 100%;
+    }
 
-.section.banner {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
+    .section.header ul{
+        display: inline-block;
+    }
 
-.section.banner .greeting {
-    /* styling ---------------------*/
-    width: 300px;
-    border: 1px solid var(--red);
-}
+    .section.header ul li{
+        display: inline-block;
+        margin: 0px 5px;
+    }
 
-/* BANNER END ------------------------------------------*/
+    .section.header ul li a {
+        color: var(--white);
+    }
 
-/* ------------------------------------------------------------- */
+    .section.header ul li a:hover {
+        color: var(--gold);
+    }
 
-/* ABOUT START -----------------------------------------*/
+    .section.header ul li a:active {
+        color: var(--black);
+    }
 
-.section.about {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-}
+    /* HEADER END ------------------------------------------*/
 
-/* ABOUT END -------------------------------------------*/
+    /* ------------------------------------------------------------- */
 
+    /* BANNER START ----------------------------------------*/
 
-.section.products {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-}
+    .section.banner {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        height: 700px;
+        position: relative;
+    }
 
-.section.contact {
-    grid-column: 1 / 2;
-    grid-row: 5 / 6;
-}
+    .section.banner .greeting {
+        /* styling ---------------------*/
+        position: absolute;
+        width: auto;
+        height: 150px;
+        /* background-color: rgba(255, 255, 255, 0.45); */
+        color: var(--black);
+        padding: 30px 30px;
+        margin: 20px;
+        /* border-radius: 10px; */
+        z-index: 10;
+    }
+
+    .section.banner .greeting h1{
+        color: var(--white);
+        font-size: 45px;
+        margin: 0px 0px 0px 0px;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    .section.banner .greeting p{
+        color: var(--white);
+        font-size: 25px;
+        margin: 0px 0px 30px 0px;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    .section.banner .greeting .greetingButtons a {
+        font-size: 18px;
+        margin: 0px 10px;
+        background-color:var(--white);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .section.banner .greeting .greetingButtons a:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    .section.banner .greeting .greetingButtons a:active {
+        color: var(--white);
+    }
+
+    .section.banner .video {
+        height: 700px;
+        object-fit: cover;
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        z-index: 1;
+        background-color: var(--solidBlack);
+    }
+
+    /* BANNER END ------------------------------------------*/
+
+    /* ------------------------------------------------------------- */
+
+    /* ABOUT START -----------------------------------------*/
+
+    .section.about {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        height: 400px;
+        color: var(--white);
+        background-color: var(--black);
+        padding: 60px;
+        gap: 30px;
+    }
+
+    .section.about h2 {
+        color: var(--gold);
+    }
+
+    /* ABOUT END -------------------------------------------*/
+
+    /* ------------------------------------------------------------- */
+
+    /* PRODUCTS START --------------------------------------*/
+
+    .section.products {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        height: 400px;
+    }
+
+    /* PRODUCTS END ----------------------------------------*/
+
+    /* ------------------------------------------------------------- */
+
+    /* CONTACT START ---------------------------------------*/
+
+    .section.contact {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+        color: var(--white);
+        background-color: var(--black);
+    }
+
+    .section.contact h2 {
+        color: var(--gold);
+    }
+
+    .section.contact .contact-center img{
+        width: 25px;
+        height: auto;
+        padding: 0px 10px 0px 0px;
+    }
+
+    /* CONTACT END -----------------------------------------*/
