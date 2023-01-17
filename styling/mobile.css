@@ -83,7 +83,7 @@
 
     .section.header .nav-menu.active {
         left: 0;
-        width: 100vw;
+        width: 100%;
     }
 
     /* li */
