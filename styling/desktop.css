@@ -1,4 +1,4 @@
-@media all and (min-width: 1124px) and (max-width: 2000px) {
+@media all and (min-width: 1124px) {
 
     :root {
         --black: rgba(0, 0, 0, 1);
@@ -33,6 +33,11 @@
         grid-template-rows: repeat(5, max-content);
         min-height: 100vh;
         min-width: 100vw;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--black);
     }
 
     /* ------------------------------------------------------------- */
@@ -164,6 +169,7 @@
 
     .section.banner .greeting .greetingButtons a {
         display: inline-block;
+        text-align: center;
         font-size: 24px;
         margin: 0px 10px;
         background-color:var(--white);
@@ -321,6 +327,7 @@
     .section.products a {
         font-size: 20px;
         border: 2px solid var(--black);
+        text-align: center;
         padding: 10px;
         border-radius: 5px;
         transition: all .1s ease-in-out; 
