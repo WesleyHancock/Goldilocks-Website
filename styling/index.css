@@ -1,112 +1,253 @@
-:root {
-    --black: rgba(0, 0, 0, 1);
-    --grey: rgba(207, 207, 207, 1);
-    --red:rgba(252, 0, 0, 1);
-}
+    :root {
+        --black: rgba(0, 0, 0, 1);
+        --white: rgba(255, 255, 255, 1);
+        --gold: rgb(230, 207, 0);
+        --grey: rgba(207, 207, 207, 1);
+        --red:rgba(252, 0, 0, 1);
+    }
 
-body {
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-}
+    html {
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
 
-.flex-row-center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+    body {
+        padding: 0px;
+        margin: 0px;
+        overflow-x: hidden;
+    }
 
-.flex-row-spaceBetween {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, max-content);
+        min-height: 100vh;
+        min-width: 100vw;
+    }
 
-.flex-row-spaceEvenly {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
+    a {
+        text-decoration: none;
+        color: var(--black);
+    }
 
-.flex-column-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    a:hover {
+        color: var(--gold);
+    }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    min-height: 100vh;
-    min-width: 100vw;
-}
+    a:active {
+        color: var(--black);
+    }
 
-.section {
-    border: 1px solid var(--red);
-}
+    /* HEADER START ----------------------------------------*/
 
-/* HEADER START ----------------------------------------*/
+    /* .section.header {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        height: 100px;
+        background-color: var(--black);
+        color: var(--white);
+    }
 
-.section.header {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    padding: 10px 40px;
-}
+    .section.header .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+    }
 
-.section.header nav {
-    height: 100%;
-}
+    .section.header .nav img {
+        width: 200px;
+        height: auto;
+    }
 
-.section.header ul{
-    display: inline-block;
-}
+    .section.header ul{
+        display: inline-block;
+    }
 
-.section.header ul li{
-    display: inline-block;
-}
+    .section.header ul li{
+        display: inline-block;
+        margin: 0px 5px;
+    }
 
-/* HEADER END ------------------------------------------*/
+    .section.header ul li a {
+        color: var(--white);
+    }
 
-/* ------------------------------------------------------------- */
+    .section.header ul li a:hover {
+        color: var(--gold);
+    }
 
-/* BANNER START ----------------------------------------*/
+    .section.header ul li a:active {
+        color: var(--black);
+    } */
 
-.section.banner {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
+    /* HEADER END ------------------------------------------*/
 
-.section.banner .greeting {
-    /* styling ---------------------*/
-    width: 300px;
-    border: 1px solid var(--red);
-}
+    /* ------------------------------------------------------------- */
 
-/* BANNER END ------------------------------------------*/
+    /* BANNER START ----------------------------------------*/
 
-/* ------------------------------------------------------------- */
+    .section.banner {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 700px;
+        position: relative;
+    }
 
-/* ABOUT START -----------------------------------------*/
+    .section.banner .greeting {
+        /* styling ---------------------*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: auto;
+        color: var(--black);
+        z-index: 10;
+    }
 
-.section.about {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-}
+    .section.banner .greeting h1{
+        color: var(--white);
+        font-size: 45px;
+        margin: 0px 0px 0px 0px;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+    }
 
-/* ABOUT END -------------------------------------------*/
+    .section.banner .greeting p{
+        color: var(--white);
+        font-size: 25px;
+        margin: 0px 0px 30px 0px;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+    }
 
+    .section.banner .greeting .bottle {
+        max-width: 300px;
+        height: auto;
+    }
 
-.section.products {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-}
+    .section.banner .greeting .greetingButtons a {
+        font-size: 18px;
+        margin: 0px 10px;
+        background-color:var(--white);
+        padding: 10px;
+        border-radius: 5px;
+    }
 
-.section.contact {
-    grid-column: 1 / 2;
-    grid-row: 5 / 6;
-}
+    .section.banner .greeting .greetingButtons a:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    .section.banner .greeting .greetingButtons a:active {
+        color: var(--white);
+    }
+
+    .section.banner .video {
+        height: 700px;
+        object-fit: cover;
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        z-index: 1;
+        background-color: var(--solidBlack);
+    }
+
+    /* BANNER END ------------------------------------------*/
+
+    /* ------------------------------------------------------------- */
+
+    /* ABOUT START -----------------------------------------*/
+
+    .section.about {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+        color: var(--white);
+        background-color: var(--black);
+        padding: 60px;
+        gap: 30px;
+    }
+
+    .section.about .image-about {
+        max-width: 250px;
+        height: auto;
+    }
+
+    /* .section.about h2 {
+        color: var(--gold);
+    } */
+
+    /* ABOUT END -------------------------------------------*/
+
+    /* ------------------------------------------------------------- */
+
+    /* PRODUCTS START --------------------------------------*/
+
+    .section.products {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+        padding: 60px;
+    }
+
+    .section.products .image-product {
+        max-width: 400px;
+        height: auto;
+    }
+
+    /* PRODUCTS END ----------------------------------------*/
+
+    /* ------------------------------------------------------------- */
+
+    /* CONTACT START ---------------------------------------*/
+
+    .section.contact {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        background-color: var(--black);
+    }
+
+    .section.contact .cell {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .section.contact .mail {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .section.contact h2 {
+        color: var(--gold);
+        padding: 0px 0px 10px 0px;
+        border-bottom: 1px solid var(--gold);
+    }
+
+    .section.contact .contact-center img{
+        width: 25px;
+        height: auto;
+        padding: 0px 10px 0px 0px;
+    }
+
+    /* CONTACT END -----------------------------------------*/

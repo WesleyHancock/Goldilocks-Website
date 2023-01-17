@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styling/index.css">
+    <link rel="stylesheet" href="styling/desktop.css">
+    <link rel="stylesheet" href="styling/tablet.css">
+    <link rel="stylesheet" href="styling/mobile.css">
+
+
     <title>Goldilocks</title>
 </head>
 <body>
@@ -12,36 +17,80 @@
     <div class="grid">
 
         <div class="section header">
-            <nav class="flex-row-spaceBetween">
-                <span>Goldilocks</span>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Contact</a></li>
+            <nav class="nav">
+                <a href="#"><img src="/images/Website_InlineLogo-01.svg"></a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#products" class="nav-link">Product</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </nav>
         </div>
 
-        <div class="section banner flex-column-center">
-            <div class="greeting flex-column-center">
-                <h1>Hello</h1>
-                <h2>Welcome to Goldilocks!</h2>
-                <a href="#">View Products</a>
+        <div class="section banner">
+            <div class="greeting">
+                <!-- <img class="bottle" src="images/Bottle_Official_nb.png"> -->
+                <h1>The Gold Standard</h1>
+                <p>A Luxury Essential Hair and Beard Oil</p>
+                <div class="greetingButtons">
+                    <a href="#products">View Products</a>
+                    <a href="#contact">Get in Touch</a>
+                </div>
             </div>
+            <div class="overlay"></div>
+            <video class="video" preload="metadata" loop autoplay playsinline muted>
+                <source src="/videos/Beard01-PavelDanilyukComp.mp4" type="video/mp4">
+            </video>
         </div>
 
-        <div class="section about flex-row-spaceEvenly">
-            <img class="image" src="#" alt="Image">
+        <div class="section about" id="about">
+            <img class="image-about" src="images/Website_BlockLogo-01.svg" alt="Image">
             <div class="write-up">
-                <p>I am the about section</p>
+                <h2>ESSENTIAL OILS ARE THE FUTURE!</h2>
+                <p>Goldilocks is a Luxury, All Natural, Essential hair and beard oil.
+                Our formula contains the renowned Frankincense and Myrrh blend of essential oils.<br><br>
+                Essential oils are highly concentrated natural extracts from the leaves, flowers, and stems of plants.
+                Their antifungal, antibacterial, and antiviral properties make them a useful and highly sought after product for the skin and hair.</p>
+            </div>
+            <img class="image-plant01" src="images/UtahHoneysuckle.svg" alt="Image">
+            <!-- <img class="image-plant02" src="images/WoodlandBeardtongue.svg" alt="Image">
+            <img class="image-plant03" src="images/epilobium-angustifolium-2.svg" alt="Image"> -->
+        </div>
+
+        <div class="section products" id="products">
+            <img class="image-product" src="images/All_Official__2_-removebg-preview.png" alt="Image">
+            <div class="pulse"></div>
+            <div class="write-up">
+                <h2>GOLDEN LIQUID LIGHT</h2>
+                <p>Our Blend of Essential oils have been carefully picked and extracted to give you the best money can buy.
+                The Essential oil blends have been used and Trusted for Thousands of years!<br><br>
+                Not only will our hair oil moisturize and add shine to your locks, but it will also provide the necessary ingredients for maximum growth,
+                helping you maintain Healthy skin and Radiating hair.<br><br>
+                <strong>ORDER YOUR SUPERIOR OIL TODAY!</strong><br>Contact us via E-mail or Phone us directly for a shipment.</p>
+                <a href="#contact">Order Now</a>
             </div>
         </div>
 
-        <div class="section products"></div>
-
-        <div class="section contact"></div>
+        <div class="section contact" id="contact">
+            <div class="contact">
+                <h2>Wesley Hancock</h2>
+                <div class="cell">
+                    <img src="branding/whitePhone.png">
+                    <h3><a href="tel:+27813878419">081 387 8419</a></h3>
+                </div>
+                <div class="mail">
+                    <img src="branding/whiteMail.png">
+                    <h3><a href="mailto:wesleyhancock@protonmail.com">wesleyhancock@protonmail.com</a></h3>
+                </div>
+            </div>
+        </div>
 
     </div>
-
+    <script src="/scripts/index.js"></script>
 </body>
 </html>
